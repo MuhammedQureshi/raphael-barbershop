@@ -114,7 +114,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <a href="/services">
+          <a href="/Services">
             <Button 
               variant="outline" 
               size="lg" 
