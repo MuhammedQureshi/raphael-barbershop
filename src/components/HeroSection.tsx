@@ -4,7 +4,7 @@ import { Phone, MapPin, Star } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen mt-20 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen  flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -101,7 +101,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col md:flex-row items-center justify-center gap-8 text-sm text-muted-foreground"
+          className="md:flex flex-col hidden md:flex-row items-center justify-center gap-8 text-sm text-muted-foreground"
         >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
