@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star } from "lucide-react";
 
@@ -17,50 +18,91 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         {/* Decorative Line */}
-        <div className="flex items-center justify-center gap-4 mb-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center justify-center gap-4 mb-8"
+        >
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary" />
           <span className="text-primary text-sm tracking-[0.3em] uppercase">Est. Stoke-on-Trent</span>
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary" />
-        </div>
+        </motion.div>
 
         {/* Main Title */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
+        >
           <span className="text-gradient">Raphael</span>
           <br />
           <span className="text-foreground">Barber</span>
-        </h1>
+        </motion.h1>
 
         {/* Rating */}
-        <div className="flex items-center justify-center gap-2 mb-8">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex items-center justify-center gap-2 mb-8"
+        >
           <div className="flex">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, rotate: -20 }}
+                animate={{ opacity: 1, rotate: 0 }}
+                transition={{ duration: 0.3, delay: 0.4 + i * 0.1 }}
+              >
+                <Star className="w-5 h-5 fill-primary text-primary" />
+              </motion.div>
             ))}
           </div>
           <span className="text-primary font-semibold">5.0</span>
           <span className="text-muted-foreground">(37 reviews)</span>
-        </div>
+        </motion.div>
 
         {/* Tagline */}
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+        >
           Where tradition meets modern style. Experience the art of grooming 
           with precision cuts and timeless service.
-        </p>
+        </motion.p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <Button size="lg" className="group px-8 py-6 text-lg gold-glow">
-            <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-            Book Now
-          </Button>
-          <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary/30 hover:bg-primary/10">
-            <MapPin className="w-5 h-5 mr-2" />
-            Get Directions
-          </Button>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+            <Button size="lg" className="group px-8 py-6 text-lg gold-glow">
+              <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+              Book Now
+            </Button>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+            <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary/30 hover:bg-primary/10">
+              <MapPin className="w-5 h-5 mr-2" />
+              Get Directions
+            </Button>
+          </motion.div>
+        </motion.div>
 
         {/* Quick Info */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex flex-col md:flex-row items-center justify-center gap-8 text-sm text-muted-foreground"
+        >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             <span>Open Now</span>
@@ -71,14 +113,29 @@ const HeroSection = () => {
           <a href="tel:07803687144" className="text-primary hover:underline">
             07803 687144
           </a>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-primary to-transparent" />
-      </div>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
+        <motion.span 
+          animate={{ y: [0, 5, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="text-xs text-muted-foreground tracking-widest uppercase"
+        >
+          Scroll
+        </motion.span>
+        <motion.div 
+          animate={{ scaleY: [1, 1.3, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="w-px h-8 bg-gradient-to-b from-primary to-transparent origin-top" 
+        />
+      </motion.div>
     </section>
   );
 };
