@@ -114,7 +114,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Link to="/services">
+          <a href="/services">
             <Button 
               variant="outline" 
               size="lg" 
@@ -123,7 +123,7 @@ const ServicesSection = () => {
               View All Services
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
