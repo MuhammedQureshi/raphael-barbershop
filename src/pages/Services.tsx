@@ -9,89 +9,90 @@ import Footer from "@/components/Footer";
 const allServices = [
   {
     icon: Scissors,
-    title: "Classic Haircut",
-    description: "Traditional scissor cut with styling. Includes consultation, wash, cut, and finish.",
-    price: "£15",
+    title: "Normal Haircut",
+    description: "Clean, classic haircut finished neatly to your preference.",
+    price: "£12",
     duration: "30 mins"
   },
   {
     icon: Scissors,
     title: "Skin Fade",
-    description: "Precision skin fade with seamless gradient blending from skin to desired length.",
-    price: "£18",
+    description: "Sharp skin fade with smooth blending and crisp edges.",
+    price: "£14",
     duration: "40 mins"
   },
   {
     icon: Scissors,
-    title: "Scissor Fade",
-    description: "Expert scissor work creating a soft, natural gradient fade effect.",
-    price: "£20",
+    title: "Haircut & Beard Trim",
+    description: "Normal haircut combined with a tidy beard trim and shape.",
+    price: "£23",
     duration: "45 mins"
   },
   {
-    icon: Crown,
-    title: "Executive Cut",
-    description: "Premium haircut experience with hot towel, head massage, and precision styling.",
-    price: "£30",
-    duration: "50 mins"
+    icon: Scissors,
+    title: "Skin Fade & Beard Trim",
+    description: "Skin fade haircut paired with a clean beard trim.",
+    price: "£25",
+    duration: "55 mins"
   },
   {
-    icon: Droplets,
-    title: "Beard Trim",
-    description: "Shape and trim your beard to perfection with clean lines and edges.",
+    icon: Zap,
+    title: "Kids Cut (Under 10)",
+    description: "Simple and comfortable haircut for children under 10.",
     price: "£10",
-    duration: "20 mins"
+    duration: "25 mins"
+  },
+  {
+    icon: Zap,
+    title: "Kids Skin Fade",
+    description: "Skin fade haircut tailored for kids.",
+    price: "£12",
+    duration: "30 mins"
   },
   {
     icon: Droplets,
-    title: "Beard Sculpting",
-    description: "Full beard redesign with detailed shaping, conditioning, and styling.",
-    price: "£15",
+    title: "Beard Trim, Shape & Hot Towel",
+    description: "Beard shaping with relaxing hot towel treatment.",
+    price: "£10",
+    duration: "25 mins"
+  },
+  {
+    icon: Sparkles,
+    title: "Wet Shave & Hot Towel",
+    description: "Traditional wet shave with hot towel preparation.",
+    price: "£14",
     duration: "30 mins"
   },
   {
     icon: Sparkles,
-    title: "Traditional Shave",
-    description: "Straight razor shave with hot towel prep, premium lather, and aftercare.",
-    price: "£20",
-    duration: "30 mins"
-  },
-  {
-    icon: Flame,
-    title: "Hot Towel Shave",
-    description: "Luxury shave experience with multiple hot towels, oils, and soothing balms.",
-    price: "£25",
-    duration: "40 mins"
-  },
-  {
-    icon: Scissors,
-    title: "Hair & Beard Combo",
-    description: "Complete grooming package with haircut and full beard service.",
-    price: "£25",
-    duration: "50 mins"
-  },
-  {
-    icon: Zap,
-    title: "Kids Cut",
-    description: "Gentle and patient haircut service for children under 12.",
-    price: "£12",
+    title: "OAP Cut",
+    description: "Classic haircut for senior clients.",
+    price: "£10",
     duration: "25 mins"
   },
   {
+    icon: Flame,
+    title: "Nose & Ear Wax",
+    description: "Quick and effective nose and ear waxing service.",
+    price: "£5",
+    duration: "10 mins"
+  },
+  {
     icon: Brush,
-    title: "Grey Blending",
-    description: "Subtle color service to blend grey hairs for a natural, youthful look.",
-    price: "£20",
-    duration: "40 mins"
+    title: "Face Mask",
+    description: "Refreshing facial mask to cleanse and rejuvenate skin.",
+    price: "£5",
+    duration: "10 mins"
   },
   {
     icon: Crown,
-    title: "The Full Experience",
-    description: "Ultimate grooming: haircut, hot towel shave, beard sculpt, and styling.",
-    price: "£50",
+    title: "Full Service",
+    description: "Complete grooming experience including hair, beard, and treatments.",
+    price: "£40",
     duration: "90 mins"
-  },
+  }
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },

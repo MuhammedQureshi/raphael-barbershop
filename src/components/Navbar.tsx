@@ -57,7 +57,7 @@ const Navbar = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button size="sm" className="gold-glow">
+            <Button size="sm" className="gold-glow" onClick={() => window.location.href = "tel:07803687144"}>
               <Phone className="w-4 h-4 mr-2" />
               Call Now
             </Button>
@@ -90,7 +90,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button className="mt-2 gold-glow">
+              <Button className="mt-2 gold-glow" onClick={() => window.location.href = "tel:07803687144"}> 
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </Button>

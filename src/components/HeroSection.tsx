@@ -61,7 +61,7 @@ const HeroSection = () => {
             ))}
           </div>
           <span className="text-primary font-semibold">5.0</span>
-          <span className="text-muted-foreground">(37 reviews)</span>
+          <span className="text-muted-foreground">(google reviews)</span>
         </motion.div>
 
         {/* Tagline */}
@@ -83,13 +83,13 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-            <Button size="lg" className="group px-8 py-6 text-lg gold-glow">
+            <Button size="lg" className="group px-8 py-6 text-lg gold-glow" onClick={() => window.location.href = "tel:07803687144"}>
               <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
               Book Now
             </Button>
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-            <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary/30 hover:bg-primary/10">
+            <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary/30 hover:bg-primary/10" onClick={() => window.open("https://share.google/c0CqZzeUwp6mDIECU", "_blank")}>
               <MapPin className="w-5 h-5 mr-2" />
               Get Directions
             </Button>

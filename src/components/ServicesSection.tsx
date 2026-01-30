@@ -7,23 +7,24 @@ import { Card, CardContent } from "@/components/ui/card";
 const services = [
   {
     icon: Scissors,
-    title: "Precision Haircuts",
-    description: "Classic and contemporary styles tailored to your unique look and personality.",
-    price: "From £15"
-  },
-  {
-    icon: Droplets,
-    title: "Beard Grooming",
-    description: "Expert beard shaping, trimming, and hot towel treatments for the perfect finish.",
-    price: "From £10"
+    title: "Normal Haircut",
+    description: "Clean, sharp haircut finished to a high standard.",
+    price: "£12"
   },
   {
     icon: Sparkles,
-    title: "Luxury Shaves",
-    description: "Traditional straight razor shaves with premium oils and soothing aftercare.",
-    price: "From £20"
+    title: "Skin Fade",
+    description: "Professional skin fade with smooth blends and crisp lines.",
+    price: "£14"
+  },
+  {
+    icon: Droplets,
+    title: "Beard Trim & Hot Towel",
+    description: "Beard shaping with a relaxing hot towel finish.",
+    price: "£10"
   }
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },

@@ -54,7 +54,7 @@ const ContactSection = () => {
               Basford, Stoke-on-Trent<br />
               ST4 6HT
             </p>
-            <Button variant="outline" className="border-primary/30 hover:bg-primary/10">
+            <Button variant="outline" className="border-primary/30 hover:bg-primary/10" onClick={() => window.open("https://share.google/c0CqZzeUwp6mDIECU", "_blank")}>
               <Navigation className="w-4 h-4 mr-2" />
               Get Directions
             </Button>
@@ -81,13 +81,12 @@ const ContactSection = () => {
               Ready to book your appointment?
             </p>
             <a 
-              href="tel:07803687144" 
               className="text-2xl font-semibold text-gradient block mb-6"
             >
               07803 687144
             </a>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Button className="gold-glow">
+              <Button className="gold-glow" onClick={() => window.location.href = "tel:07803687144"}>
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </Button>
